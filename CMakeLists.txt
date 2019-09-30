@@ -1,10 +1,10 @@
 cmake_minimum_required (VERSION 2.8)
 
-project (TUTORIALS)
+project (GLToturials)
 
 list(APPEND CMAKE_CXX_FLAGS "-std=c++11")
 
-#set(EXECUTABLE_OUTPUT_PATH  "${CMAKE_SOURCE_DIR}/bin")
+set(EXECUTABLE_OUTPUT_PATH  "${CMAKE_SOURCE_DIR}/bin")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 
@@ -18,10 +18,8 @@ if(NOT GLFW3_FOUND)
    message(ERROR "-- GLFW3 not found!")
 endif(NOT GLFW3_FOUND)
 
-set( COMMON_LIBS opengl32  ${GLEW_LIBRARY} ${GLFW3_LIBRARY})
 
-
-#include_directories( ${GLSLCOOKBOOK_INCLUDE} )
+add_subdirectory(src/common)
 add_subdirectory(src/hello_window)
 #add_subdirectory( ingredients )
 #add_subdirectory( chapter01 )
