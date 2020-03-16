@@ -18,9 +18,15 @@ void printGLInfo()
 	std::cout << "glsl version:" << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
 }
 
-int main()
+template<typename T, typename U>
+auto add2(T x, U y)
 {
-    // glfw: initialize and configure
+	return x + y; 
+}
+
+int main()
+{	
+	// glfw: initialize and configure
     // ------------------------------
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
