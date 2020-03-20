@@ -21,6 +21,7 @@ endif(NOT GLFW3_FOUND)
 
 add_subdirectory(src/common)
 add_subdirectory(src/hello_window)
+add_subdirectory(src/picking_colorbuffer)
 #add_subdirectory( ingredients )
 #add_subdirectory( chapter01 )
 #add_subdirectory( chapter02 )
